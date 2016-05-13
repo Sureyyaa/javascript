@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<script>
+// Sual 01 -Aşağıdakı kodun netice nedir ve sebebini izah edin.
+
+
+  // var y = 1;
+  // if (function f(){}) {
+  //   y += typeof f;
+  // }
+  // console.log(y);
+
+// CAVAB: netice undefined. f-in tipi teyin oluna bilmir. cunki f funksiya kimi qlobal teyin olunmayib. if-in serti yerinde verilib, yeni lokaldadir. ona gore tipi oxuna bilmir. umumiyyetle bu cod cok sacma)))
+
+
+
+
+
+
+// Sual 02 - Aşağıdakı massivin icini nece usulla bosaldmaq olar izah edin.
+
+
+//    var myArr =  ['a','b','c','d','e','f'];
+
+
+//CAVAB: 
+
+ //1-ci usul
+
+// var myArr =  ['a','b','c','d','e','f'];
+// while(myArr.length>0){
+//   myArr.pop();
+// }
+// console.log(myArr);
+
+// 2-ci usul
+
+// var myArr =  ['a','b','c','d','e','f'];
+// while(myArr.length>0){
+//   myArr.shift();
+// }
+// console.log(myArr);
+   
+//3-cu usul
+
+// var myArr =  ['a','b','c','d','e','f'];
+// myArr.splice(0, myArr.length);
+// console.log(myArr);
+
+//4-cu ve nehayet en yaxsi usul))
+
+// var myArr =  ['a','b','c','d','e','f'];
+// myArr=[];
+// console.log(myArr);
+
+
+
+
+// Sual 03 - Aşağıdakı verilen kodların neticeleri ve sebeblerini izah edin.
+
+
+    // var bar = true;
+  // console.log(bar + 0);          // CAVAB: Netice 1.  cunki bar true`ya menimsedilib. onun da qiymeti 1-dir. 1+0=1.
+  // console.log(bar + "xyz");   // CAVAB: netice truexyz. "xyz" stringdir. string toplana bilmir deye + birlesdirme ozelliyini ise salir ve birlesik yazilir. bilmem anlata bildimmi))
+  // console.log(bar + true);       //CAVAB: netice 2. true`nun qiymeti 1 olduguna gore toplanir 1+1=2.
+  // console.log(bar + false);     //CAVAB: netice 1. cunku true=1, false=0. 1+0=1.
+
+
+
+
+// Sual 04 - Asagıdakı kodun neticesi nedir ve sebebini izah edin.
+
+
+ // var salary = "1000$";
+
+ // (function () {
+ //     console.log("Original salary was " + salary);
+
+ //     var salary = "5000$";
+
+ //     console.log("My New Salary " + salary);
+ // })();
+ 
+
+//CAVAB: netice: Original salary was undefined, My New Salary 5000$ 
+// birincide ona gore undefined cixir ki, funksiya daxilinde salary yeni bir variable kimi yaradildi. ve artiq salary funksiya daxilinde "5000$" dir. birinci console.log-dan sonra geldiyine gore qiymetini cixara bilmir. bir salary var ama console.log sonra geldiyine gore qiymetini cixara bilmir. ikinci de ise salary console.log=dan evvel verildiyine gore normal cixarir.
+
+
+
+
+
+
+
+ // Sual 05 - 
+
+ /* Verilenler
+
+  var size=[[width],[height]];
+    var color=[];
+
+    ----Bu verilenlere gore istifadeci terefinden girilen reqeme esasen divler yaranacaq ekranda ve bu divler 4 sütün seklinde ekranda gorunecek.Ekrandakı divlerin her setirde 3.cu yerde duran div border:2px solid red  xususiyyetine sahib olacaq.(bu meselen constructor function istifade olunaraq yazılacaq.)
+
+*/
+//CAVAB:
+
+var divler= Number(prompt("div sayini daxil edin: ", ""));
+
+for(var i=0; i<divler; i++){
+  if( i%4==0){
+    document.write("<br>");
+    }
+if((i+2)%4==0){
+  document.write('<div style="width:100px; height:150px;  margin:10px; display:inline-block; background:blue; border:2px solid red"></div>');
+}
+else{
+  document.write('<div style="width:100px; height:150px;  margin:10px; display:inline-block; background:blue"></div>');
+};
+}
+
+
+</script>
+
+
+</body>
+</html>
